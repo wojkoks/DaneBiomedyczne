@@ -104,8 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         <?php else: ?>
             <form method="post" action="reset_password.php">
-                <input type="hidden" name="action" value="lookup">
-
                 <label for="email">E-mail konta</label>
                 <input type="email" id="email" name="email" value="<?= $email ?>" required>
 
