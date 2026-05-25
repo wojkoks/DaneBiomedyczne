@@ -44,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (!$errors) {
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-        $resetAnswerHash = password_hash(strtolower($resetAnswer), PASSWORD_DEFAULT);
+        $passwordHash = password_hash($password);
+        $resetAnswerHash = password_hash(strtolower($resetAnswer));
         $nameSql = mysqli_real_escape_string(db(), $name);
         $passwordHashSql = mysqli_real_escape_string(db(), $passwordHash);
         $resetQuestionSql = mysqli_real_escape_string(db(), $resetQuestion);
